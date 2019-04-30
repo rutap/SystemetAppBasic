@@ -139,6 +139,14 @@ public class MainActivity extends AppCompatActivity {
         .from(this).inflate(R.layout.search_dialog, null);
 
     builder.setView(viewInflated);
+    builder.setNeutralButton("clear", new DialogInterface.OnClickListener() {
+      @Override
+      public void onClick(DialogInterface dialog, int which) {
+        Log.d(LOG_TAG, " User cleared the search");
+        // YOUR CODE HERE!!! So far there is a clear button, but it does not do anything
+      }
+    });
+
 
     builder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
       @Override
