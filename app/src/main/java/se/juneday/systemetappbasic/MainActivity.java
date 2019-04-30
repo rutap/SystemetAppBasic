@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
   private static final String MIN_PRICE = "min_price";
   private static final String MAX_PRICE = "max_price";
   private static final String TYPE = "product_group";
+
   private static final String NAME = "name";
 
 
@@ -112,6 +113,8 @@ public class MainActivity extends AppCompatActivity {
         Log.d(LOG_TAG, "user presssed SEARCH");
         showSearchDialog();
         break;
+        // some stuff added /R
+
       default:
         Log.d(LOG_TAG, "uh oh ;)");
         break;
@@ -153,7 +156,13 @@ public class MainActivity extends AppCompatActivity {
         addToMap(arguments, MAX_ALCO, valueFromView(viewInflated, R.id.max_alco_input));
         addToMap(arguments, MIN_PRICE, valueFromView(viewInflated, R.id.min_price_input));
         addToMap(arguments, MAX_PRICE, valueFromView(viewInflated, R.id.max_price_input));
+        // adding name here, /R
         addToMap(arguments, NAME, valueFromView(viewInflated, R.id.name_input));
+        // at the moment it does not find anything
+          // I think it is due to the fact that the json file that shows up when clicking
+          // on a product does not contain type?
+        addToMap(arguments, TYPE, valueFromView(viewInflated, R.id.type_input));
+
         // Given the map, s earch for products and update the listview
         searchProducts(arguments);
       }
