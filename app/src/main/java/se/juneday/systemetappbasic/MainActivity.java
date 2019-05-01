@@ -233,8 +233,10 @@ public class MainActivity extends AppCompatActivity {
         double alcohol = row.getDouble("alcohol");
         double price = row.getDouble("price");
         int volume = row.getInt("volume");
-
-        Product m = new Product(name, alcohol, price, volume);
+        // adding type
+        String type = row.getString("type");
+// changed Product m in order to include type)
+        Product m = new Product(name, alcohol, price, volume, type);
         productList .add(m);
         Log.d(LOG_TAG, " * " + m);
       } catch (JSONException e) {

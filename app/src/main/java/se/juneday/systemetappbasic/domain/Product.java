@@ -113,11 +113,13 @@ package se.juneday.systemetappbasic.domain;
      * @param price The price of this Product (in SEK)
      * @param volume The volume (in millilitres) of this product
      */
-    public Product(String name, double alcohol, double price, int volume) {
+    // added String type when building a product, should work like that..
+    public Product(String name, double alcohol, double price, int volume, String type) {
       this.name = name;
       this.alcohol = alcohol;
       this.price = price;
       this.volume = volume;
+      this.type = type;
     }
 
     /**
