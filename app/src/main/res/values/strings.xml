@@ -1,3 +1,4 @@
 <resources>
   <string name="app_name">SystemetAppBasic</string>
+  <string name="checkbox">Checkbox</string>
 </resources>
