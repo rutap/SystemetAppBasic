@@ -37,5 +37,7 @@ public class ProductActivity extends AppCompatActivity {
       setViewText(R.id.product_price, "Price", String.valueOf(product.price()));
     }
 
+
+
   }
 

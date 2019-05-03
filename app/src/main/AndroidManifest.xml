@@ -23,6 +23,7 @@
     </activity>
     <activity android:name=".ProductActivity"></activity>
     <activity android:name=".SecondLayerActivity"></activity>
+    <activity android:name=".ThirdLayerActivity"></activity>
   </application>
 
 </manifest>
