@@ -7,22 +7,40 @@ import android.widget.Button;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.RatingBar;
+import android.widget.TextView;
+import android.widget.Toast;
 
 
-public class MainActivity extends AppCompatActivity {
-  private Button Button1;
-  private Button Button2;
-
+ public class MainActivity extends AppCompatActivity {
+  private Button button1;
+  private Button button2;
+  private Button buttonsubmit;
+  private RatingBar rating_b;
 
 
   @Override
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
+    onButtonClickListener();
 
+    button1 = (Button) findViewById(R.id.button1);
+    button2 = (Button) findViewById(R.id.button2);
+  }
 
-    Button1 = (Button) findViewById(R.id.button1);
-    Button2 = (Button) findViewById(R.id.button2);
+     public void onButtonClickListener() {
+      rating_b = (RatingBar) findViewById(R.id.RatingBar);
+      buttonsubmit = (Button) findViewById(R.id.button3);
+
+      buttonsubmit.setOnClickListener(
+              new OnClickListener() {
+                  @Override
+                  public void onClick(View v) {
+                      Toast.makeText(MainActivity.this, "Thank you", Toast.LENGTH_SHORT).show();
+                  }
+              }
+      );
   }
 
   public void onStart() {
@@ -31,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
   }
 
   public void addListenerOnButton() {
-    Button2.setOnClickListener(new OnClickListener() {
+    button2.setOnClickListener(new OnClickListener() {
       @Override
       public void onClick(View v) {
         if (((Button) v).isClickable()) {
@@ -42,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
       }
     });
 
-    Button1.setOnClickListener(new OnClickListener() {
+    button1.setOnClickListener(new OnClickListener() {
       @Override
       public void onClick(View v) {
         if (((Button) v).isClickable()) {
